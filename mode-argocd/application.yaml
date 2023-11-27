@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     "argocd-image-updater.argoproj.io/image-list": myalias=sqymg/argocd-updater-example
-    "argocd-image-updater.argoproj.io/myalias.update-strategy": latest
+    "argocd-image-updater.argoproj.io/myalias.update-strategy": digest
 spec:
   project: default
   source:
