@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: toolbox-backstage
+  name: updater-example
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: sqymg/argocd-updater-example
