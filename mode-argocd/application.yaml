@@ -8,13 +8,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:Secuoyas-Experience/toolbox-backstage.git
+    repoURL: https://github.com/mariogarcia/argocd-updater-example.git
     targetRevision: HEAD
-    path: .
+    path: mode-argocd/manifests
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
-
+    namespace: updater-example
   syncPolicy:
     automated:
       prune: true

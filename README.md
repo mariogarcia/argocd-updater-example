@@ -35,7 +35,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 Create a port-forwarding to expose your local ArgoCD at https://localhost:8080:
 
 ```shell
-kubectl port-forwarding svc/argocd-server 8080:8080
+kubectl port-forward -n argocd svc/argocd-server 8080:80
 ```
 
 Login with admin/\<password\>
@@ -69,6 +69,8 @@ docker push sqymg/argocd-updater-example:0.1.0
 ## Add Github repository to ArgoCD
 
 You should add this repository to ArgoCD otherwise it won't know where to get the manifests from.
+
+In ArgoCD UI go to `Settings` -> `Connect Repo` and add this repository as `https://github.com/mariogarcia/argocd-updater-example.git`
 
 ## Install application
 
