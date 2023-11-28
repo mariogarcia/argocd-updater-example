@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: sqymg/argocd-updater-example:0.1.0
+        image: sqymg/argocd-updater-example:latest
         resources:
           limits:
             memory: "128Mi"
